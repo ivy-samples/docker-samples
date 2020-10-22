@@ -1,0 +1,27 @@
+version: '3.3'
+services:
+  ivy1:
+    image: "axonivy/axonivy-engine:scaling"
+    ports:
+     - "8081:8080"
+    volumes:
+     - "../enterprise-licence.lic:/etc/axonivy-engine/enterprise-licence.lic"
+     - "./ivy.yaml:/etc/axonivy-engine/ivy.yaml"
+     - "./engine-cockpit-9.2.0-SNAPSHOT.iar.zip:/usr/lib/axonivy-engine-9/system/application/engine-cockpit/engine-cockpit-9.2.0-SNAPSHOT.iar.zip"
+    depends_on:
+     - db
+  ivy2:
+    image: "axonivy/axonivy-engine:scaling"
+    ports:
+     - "8082:8080"
+    volumes:
+     - "../enterprise-licence.lic:/etc/axonivy-engine/enterprise-licence.lic"
+     - "./ivy.yaml:/etc/axonivy-engine/ivy.yaml"
+     - "./engine-cockpit-9.2.0-SNAPSHOT.iar.zip:/usr/lib/axonivy-engine-9/system/application/engine-cockpit/engine-cockpit-9.2.0-SNAPSHOT.iar.zip"
+    depends_on:
+     - db
+  db:
+    image: "postgres:latest"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 1234

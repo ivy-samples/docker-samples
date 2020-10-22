@@ -1,0 +1,22 @@
+[Begin Licence]
+#Licence for AxonIvy Axon.ivy Engine (Enterprise Edition)
+#Tue Sep 08 08:39:36 UTC 2020
+licence.keyversion=axonivy/9000
+licence.number=XLSEE-1746-CDED-42DL
+licence.type=Enterprise Edition
+licence.valid.from=2020-09-08
+licence.valid.until=2021-10-08
+licencee.individual=
+licencee.organisation=Reto Weiss
+product.name=Axon.ivy Engine
+product.type=Server
+public.urls=
+server.cluster.local.node.id=0
+server.cluster.name=ivy-scaling
+server.elements.limit=0
+server.sessions.limit=0
+server.users.limit=0
+[End Licence]
+[Begin Signature]
+MC0CFQCNGLMx8+luy3ACuZ6UMJIOuMdvXAIUEXTu48HWT8Kb38FAFqzY0tQ1VQY=
+[End Signature]
